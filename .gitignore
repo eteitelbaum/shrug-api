@@ -1,0 +1,21 @@
+# Ignore all files in data/raw and data/processed
+data/raw/*
+data/processed/*
+
+# But don't ignore .gitkeep files 
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Ignore a specific file
+shrug-explore.ipynb
+
+# Virtual environment
+shrugenv/
+
+# Python
+*.py[cod]
+__pycache__/
+*.so
+
+# VS Code settings
+.vscode/

@@ -1,0 +1,19 @@
+{
+  "data_files": [
+    {
+      "filename": "pc91_pca_clean_shrid.parquet",
+      "local_path": "../../data/processed/shrug-pca91-parquet/pc91_pca_clean_shrid.parquet",
+      "s3_path": "s3://your-bucket/census/shrug-pca91-parquet/pc91_pca_clean_shrid.parquet"
+    },
+    {
+      "filename": "pc01_pca_clean_shrid.parquet",
+      "local_path": "../../data/processed/shrug-pca01-parquet/pc01_pca_clean_shrid.parquet",
+      "s3_path": "s3://your-bucket/census/shrug-pca01-parquet/pc01_pca_clean_shrid.parquet"
+    },
+    {
+      "filename": "pc11_pca_clean_shrid.parquet",
+      "local_path": "../../data/processed/shrug-pca11-parquet/pc11_pca_clean_shrid.parquet",
+      "s3_path": "s3://your-bucket/census/shrug-pca11-parquet/pc11_pca_clean_shrid.parquet"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+duckdb
+pyarrow
+pytest
+httpx
+requests
+boto3
+sqlalchemy
