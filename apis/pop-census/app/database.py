@@ -25,7 +25,7 @@ def init_db():
     
     # Create tables for each census year
     for year, filename in census_files.items():
-        table_name = f"census_{str(year)[-2:]}"
+        table_name = f"population_{str(year)[-2:]}"
         file_path = get_data_path(filename, api_name='pop-census')
         
         try:
@@ -41,7 +41,7 @@ def init_db():
 
 def ensure_db_initialized():
     conn = get_db_connection()
-    tables = conn.execute("SELECT name FROM sqlite_master WHERE type='table' AND name LIKE 'census_%'").fetchall()
+    tables = conn.execute("SELECT name FROM sqlite_master WHERE type='table' AND name LIKE 'population_%'").fetchall()
     conn.close()
     
     if not tables:
