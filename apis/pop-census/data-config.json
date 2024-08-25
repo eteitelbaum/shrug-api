@@ -1,19 +1,55 @@
 {
   "data_files": [
     {
-      "filename": "pc91_pca_clean_shrid.parquet",
-      "local_path": "../../data/processed/shrug-pca91-parquet/pc91_pca_clean_shrid.parquet",
-      "s3_path": "s3://your-bucket/census/shrug-pca91-parquet/pc91_pca_clean_shrid.parquet"
+      "type": "pca",
+      "years": [1991, 2001, 2011],
+      "aggregation_levels": {
+        "shrid": "pc{year_short}_pca_clean_shrid.parquet",
+        "constituency_pre_2008": "pc{year_short}_pca_clean_con07.parquet",
+        "constituency_post_2008": "pc{year_short}_pca_clean_con08.parquet",
+        "district": "pc{year_short}_pca_clean_pc{year_short}dist.parquet",
+        "subdistrict": "pc{year_short}_pca_clean_pc{year_short}subdist.parquet"
+      },
+      "available_levels": {
+        "1991": ["shrid", "constituency_pre_2008", "constituency_post_2008", "district"],
+        "2001": ["shrid", "constituency_pre_2008", "constituency_post_2008", "district", "subdistrict"],
+        "2011": ["shrid", "constituency_pre_2008", "constituency_post_2008", "district", "subdistrict"]
+      },
+      "path_template": "data/processed/shrug-pca{year_short}-parquet/{filename}"
     },
     {
-      "filename": "pc01_pca_clean_shrid.parquet",
-      "local_path": "../../data/processed/shrug-pca01-parquet/pc01_pca_clean_shrid.parquet",
-      "s3_path": "s3://your-bucket/census/shrug-pca01-parquet/pc01_pca_clean_shrid.parquet"
+      "type": "vd",
+      "years": [1991, 2001, 2011],
+      "aggregation_levels": {
+        "shrid": "pc{year_short}_vd_clean_shrid.parquet",
+        "constituency_pre_2008": "pc{year_short}_vd_clean_con07.parquet",
+        "constituency_post_2008": "pc{year_short}_vd_clean_con08.parquet",
+        "district": "pc{year_short}_vd_clean_pc{year_short}dist.parquet",
+        "subdistrict": "pc{year_short}_vd_clean_pc{year_short}subdist.parquet"
+      },
+      "available_levels": {
+        "1991": ["shrid", "constituency_pre_2008", "constituency_post_2008", "district"],
+        "2001": ["shrid", "constituency_pre_2008", "constituency_post_2008", "district", "subdistrict"],
+        "2011": ["shrid", "constituency_pre_2008", "constituency_post_2008", "district", "subdistrict"]
+      },
+      "path_template": "data/processed/shrug-vd{year_short}-parquet/{filename}"
     },
     {
-      "filename": "pc11_pca_clean_shrid.parquet",
-      "local_path": "../../data/processed/shrug-pca11-parquet/pc11_pca_clean_shrid.parquet",
-      "s3_path": "s3://your-bucket/census/shrug-pca11-parquet/pc11_pca_clean_shrid.parquet"
+      "type": "td",
+      "years": [1991, 2001, 2011],
+      "aggregation_levels": {
+        "shrid": "pc{year_short}_td_clean_shrid.parquet",
+        "constituency_pre_2008": "pc{year_short}_td_clean_con07.parquet",
+        "constituency_post_2008": "pc{year_short}_td_clean_con08.parquet",
+        "district": "pc{year_short}_td_clean_pc{year_short}dist.parquet",
+        "subdistrict": "pc{year_short}_td_clean_pc{year_short}subdist.parquet"
+      },
+      "available_levels": {
+        "1991": ["shrid", "constituency_pre_2008", "constituency_post_2008", "district"],
+        "2001": ["shrid", "constituency_pre_2008", "constituency_post_2008", "district", "subdistrict"],
+        "2011": ["shrid", "constituency_pre_2008", "constituency_post_2008", "district", "subdistrict"]
+      },
+      "path_template": "data/processed/shrug-td{year_short}-parquet/{filename}"
     }
   ]
 }
